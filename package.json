@@ -1,0 +1,15 @@
+{
+  "name": "11-movies-database-api",
+  "version": "1.0.0",
+  "description": "package.json for the movies express.js API",
+  "main": "Movies-Database-API.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
