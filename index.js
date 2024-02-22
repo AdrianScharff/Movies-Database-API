@@ -1195,7 +1195,7 @@ const movies = [
 
 // Middleware to set CORS headers
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173'); // Replace with your frontend URL
+    res.setHeader('Access-Control-Allow-Origin', 'https://moviesdatabaseas.netlify.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
@@ -1230,7 +1230,7 @@ app.get('/movies', (req, res) => {
     }
 })
 
-const port = 3700
+const port = process.env.PORT || 3700
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`)
 })
