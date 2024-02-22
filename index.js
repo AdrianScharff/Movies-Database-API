@@ -1,6 +1,7 @@
 import express from "express"
 const app = express()
 const movies = [
+    { "propertytest": "valuetest" },
     {
         "adult": false,
         "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
