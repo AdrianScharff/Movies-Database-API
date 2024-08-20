@@ -1,7 +1,6 @@
 import express from "express"
 const app = express()
 const movies = [
-    { "propertytest": "valuetest" },
     {
         "adult": false,
         "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
@@ -1196,7 +1195,11 @@ const movies = [
 
 // Middleware to set CORS headers
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://moviesdatabaseas.netlify.app/');
+    const allowedOrigins = ['https://moviesdatabaseadrian.netlify.app', 'http://localhost:5173/'];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
