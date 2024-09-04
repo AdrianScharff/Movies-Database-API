@@ -1234,6 +1234,10 @@ app.get('/movies', (req, res) => {
     }
 })
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Welcome to the Movies Database'})
+})
+
 const port = process.env.PORT || 3700
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`)
